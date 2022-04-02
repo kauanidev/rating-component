@@ -11,6 +11,10 @@ function clickButton() {
 }
 
 function confirmRating() {
+    if(!rating) {
+        window.alert("Selecione uma nota!")
+        return
+    }
     reviewSection.style.display = "none";
     thanksSection.style.display = "flex";
     const ratingText = document.querySelector('.rating span');
