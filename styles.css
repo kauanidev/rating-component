@@ -1,0 +1,162 @@
+:root {
+  --Orange: #fb7413;
+  --White: #ffffff;
+  --LightGrey: #959eac;
+  --MediumGrey: #7c8798;
+  --TopGradient: #252d37;
+  --BottomGradient: #161d28;
+  --VeryDarkBlue: #121417;
+  --BgStar: #252f39;
+}
+* {
+  font-family: "Overpass", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--VeryDarkBlue);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+main {
+  width: 365px;
+  background: linear-gradient(
+    320deg,
+    var(--BottomGradient) 0%,
+    var(--TopGradient) 100%
+  );
+  padding: 35px 30px;
+  border-radius: 30px;
+}
+
+main section {
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+.star {
+  background: var(--BgStar);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text h1 {
+  margin-bottom: 10px;
+  color: var(--White);
+}
+
+.text p {
+  color: var(--MediumGrey);
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.buttons button {
+  border: none;
+  background: var(--BgStar);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--LightGrey);
+  font-size: 16px;
+  transition: 0.8s;
+}
+
+.buttons button:hover {
+  background: var(--LightGrey);
+  color: var(--White);
+}
+
+.buttons button.active {
+  background: var(--Orange);
+  color: var(--White);
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: none;
+  background: var(--Orange);
+  color: var(--White);
+  padding: 10px 0px;
+  border-radius: 999px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  transition: 0.8s;
+}
+
+.submit:hover {
+  background: var(--White);
+  color: var(--Orange);
+}
+
+.thanks .text {
+  text-align: center;
+}
+
+.thanks {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  animation: fade 1s forwards;
+}
+
+.rating {
+  color: var(--Orange);
+  background: var(--BgStar);
+  font-size: 14px;
+  padding: 8px 15px;
+  border-radius: 999px;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
